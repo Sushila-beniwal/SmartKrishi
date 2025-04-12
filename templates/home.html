@@ -1,0 +1,107 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+
+
+
+<header>
+    <div class="container">
+        <h1 class="logo">SMART KRISHI</h1>
+        <nav>
+            <ul class="nav-list">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Prediction</li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-section">
+        <h2><pre>     INTELLIGENT FARMING WITH AI-POWERED TOOLS
+      </pre></h2>
+        <p> Advanced crop insights for smarter farming decisions</p>
+        
+        <a href="login.html">Login</a>
+        
+        
+    </div>
+</section>
+
+<section class="Services">
+    <h1>Our Services</h1>
+    <div class="Services-section">
+        <div class="Services-card">
+            <img src="{{url_for('static', filename='images/fertilizer.webp')}}" alt="">
+            <h2>Crop Recommendation</h2>
+            <pre>AI-driven system offering personalized
+ crop recommendations based on
+  environmental factors.</pre>   
+           
+<a href="crop_recommendation" target = "_blank" >Explore Crop Recommendation </a>
+            
+
+            
+        </div>
+
+        <div class="Services-card">
+            <img src= "{{url_for('static', filename='images/disease2.webp')}}" alt="">
+            <h2>Crop Disease</h2>
+            <pre>predict the name and causes of crop
+ disease and suggestions to cure it
+</pre>
+<a href= "{{ url_for('Disease_detection') }}" target = "_blank" >  Explore Disease Detection</a>
+        </div>
+
+        <div class="Services-card">
+            <img src="{{url_for('static', filename='images/prize.webp')}}" alt="">
+            <h2>Crop Price</h2>
+            <pre>The Crop Price Prediction system uses
+machine learning  to forecast future
+crop prices based on  historical data.</pre>
+            <a href=" {{ url_for('price_forecasting') }}" target = "_blank"  >Explore it</a>
+        </div>
+    </div>
+</section>
+
+<div class="heading">
+    <h1>About Us</h1>
+    <p>AI-Driven Crop Fertilizer Optimization and Disease Prediction System</p>
+</div>
+<div class="container">
+    <section class="about">
+        <div class="about-image">
+            <img src="{{url_for('static', filename='images/farmer.jpg')}}">
+        </div>
+        <div class="about-content">
+            <h2>utilizes machine learning to provide precise fertilizer recommendations and predict potential crop diseases</h2>
+            <p>Our Crop Fertilizer Recommendation System helps farmers determine the most efficient fertilizer application for 
+            their crops, reducing waste and increasing crop productivity while minimizing environmental impact. Our Crop Disease
+            Detection System uses advanced image recognition algorithms to identify potential diseases early, allowing farmers
+             to take timely action and reduce the risk of crop loss. Additionally, our Crop Price Prediction System leverages 
+            historical data and market trends to forecast crop prices, enabling farmers to make more informed decisions about when to sell their produce.
+
+             We believe that by integrating these technologies, we can drive smarter, more sustainable agricultural practices
+              that benefit both farmers and the environment. Our goal is to contribute to the future of farming by making it more 
+              efficient, resilient, and profitable.</p>
+              
+        </div>
+    </section>
+</div>
+
+
+
+</body>
+</html>
+{% endblock content %}

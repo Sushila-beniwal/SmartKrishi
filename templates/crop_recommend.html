@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    body{
+        background-image: url(green5.avif);
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+</style>
+<h1 style="text-align: center;">Crop Recommendation System </h1>
+<form name="Crop_Recommendation_System" action="/crop_recommendation" method="POST">
+    <table align="center"  style="background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 50px; font-size: 20px;">
+        <tr><td>Nitrogen:</td>
+        </tr>
+        <tr><td>
+            <input type="number" name="Nitrogen" size=""></td>
+        </tr>
+
+        <tr><td>Phosphorous:</td>
+        </tr>
+        <tr><td><input type="number" name="Phosphorous" size=""></td>
+        </tr>
+
+        <tr><td>Potassium:</td>
+        </tr>
+        <tr><td><input type="number" name="Potassium" size=""></td>
+        </tr>
+
+        <tr><td>Temperature:</td>
+        </tr>
+        <tr><td><input type="number" name="Temperature" size=""></td>
+        </tr>
+
+        <tr><td>Humidity:</td>
+        </tr>
+        <tr><td><input type="number" name="Humidity" size=""></td>
+        </tr>
+
+        <tr><td>PH:</td>
+        </tr>
+        <tr><td><input type="number" name="pH" size=""></td>
+        </tr>
+
+        <tr><td>Rainfall:</td>
+        </tr>
+        <tr><td><input type="number" name="Rainfall" size=""></td>
+        </tr>
+
+        <tr><td align="center"><input type="submit" value="Predict"></td>
+
+        </tr>
+        <br>
+        {% if result %}
+		
+			<h5>Recommend Crop for Cultivation is:</h5>
+			<p>{{ result }} </p>
+		 
+	   {% endif %}
+    </table>
+</form>
+
+
+{% endblock content %}
