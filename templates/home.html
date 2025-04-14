@@ -49,7 +49,7 @@
  crop recommendations based on
   environmental factors.</pre>   
            
-<a href="crop_recommendation" target = "_blank" >Explore Crop Recommendation </a>
+<a href="{{ url_for('crop_recommend') }}" target = "_blank" >Explore Crop Recommendation </a>
             
 
             
@@ -67,7 +67,7 @@
         <div class="Services-card">
             <img src="{{url_for('static', filename='images/prize.webp')}}" alt="">
             <h2>Crop Price</h2>
-            <pre>The Crop Price Prediction system uses
+            <pre>The Crop Price forecasting system uses
 machine learning  to forecast future
 crop prices based on  historical data.</pre>
             <a href=" {{ url_for('price_forecasting') }}" target = "_blank"  >Explore it</a>

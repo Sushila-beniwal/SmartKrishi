@@ -14,16 +14,21 @@ app = Flask(__name__)
 def index():
     return render_template("home.html", title="Home")
 
+@app.route('/crop_recommend', methods=['GET' , 'POST'])
+def crop_recommend():
+    return render_template("crop_recommend.html")
+
 @app.route('/crop_recommendation', methods=['GET' , 'POST'])
 def crop_recommendation():
-    N = request.form.get('Nitrogen')
-    P = request.form.get('Phosphorus')
-    K = request.form.get('Potassium')
-    temp = request.form.get('Temperature')
-    humidity = request.form.get('Humidity')
-    ph = request.form.get('pH')
-    rainfall = request.form.get('Rainfall')
+    N = request.form['Nitrogen']
+    P = request.form['Phosporus']
+    K = request.form['Potassium']
+    temp = request.form['Temperature']
+    humidity = request.form['Humidity']
+    ph = request.form['pH']
+    rainfall = request.form['Rainfall']
 
+   
     feature_list = [N, P, K, temp, humidity, ph, rainfall]
     single_pred = np.array(feature_list).reshape(1, -1)
 
